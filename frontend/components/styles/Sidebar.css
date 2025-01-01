@@ -1,0 +1,56 @@
+/* src/components/Sidebar.css */
+.sidebar {
+    grid-area: sidebar; /* Menentukan posisi footer di dalam grid */
+    width: 250px;
+    background: linear-gradient(135deg, #4e73d3 0%, #2a4365 100%);
+    color: white;
+    padding: 2px;
+    height: calc(100vh - 100px);
+    overflow-y: auto; /* Allow vertical scrolling */
+    position: relative; /* Needed for the dropdown position */
+}
+
+.nav-link {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, #4e73d3 0%, #2a4365 100%);
+}
+
+.nav-item {
+    position: relative;
+}
+
+.dropdown {
+    background: linear-gradient(135deg, #4e73d3 0%, #2a4365 100%);
+    width: 200px;
+    padding: 20px 0;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%; 
+    z-index: 100; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+}
+
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+.dropdown-item {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #3cadea;
+}

@@ -1,0 +1,191 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #e0f0ff 0%, #d0e7f4 100%);
+  height: 100%; /* Ensures the body takes full viewport height */
+}
+
+.layout {
+  display: flex;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer"; /* Adds sidebar to the grid layout */
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 250px 1fr;
+  height: 100vh; /* Ensures the layout takes the full viewport height */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #4e73d3 0%, #2a4365 100%);
+  color: white;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header div {
+  display: flex;
+  gap: 10px;
+}
+
+.header button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #307fa9;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+  background-color: #1d72b8;
+}
+
+.nav-link {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.nav-link:hover {
+  background: linear-gradient(135deg, #4e73d3 0%, #2a4365 100%);
+}
+
+.nav-item {
+  position: relative;
+}
+
+.dropdown {
+  background: linear-gradient(135deg, #4e73d3 0%, #2a4365 100%);
+  width: 200px;
+  padding: 20px 0;
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown-item {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #3cadea;
+}
+
+.content {
+  flex-grow: 1; /* Takes up all remaining space */
+  margin-left: 250px !important; /* Offset content from the sidebar */
+  margin-top: 60px; /* Offset content from the navbar */
+  padding: 20px;
+  background: linear-gradient(135deg, #e0f0ff 0%, #d0e7f4 100%);
+  overflow-y: auto;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.footer {
+  background: linear-gradient(135deg, #4e73d3 0%, #2a4365 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  height: 40px; /* Ensure footer has a fixed height */
+}
+
+/* Assuming this is in your main CSS file */
+.layout {
+  display: flex; /* Makes the layout horizontal */
+  flex-direction: column; /* Places the navbar at the top */
+  height: 100vh; /* Ensure the layout takes full height of the viewport */
+}
+
+.layout .navbar {
+  display: block !important;
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  z-index: 20; /* Ensure the navbar stays on top */
+  background: linear-gradient(135deg, #4e73d3 0%, #2a4365 100%);
+}
+
+.layout .sidebar {
+  width: 250px;
+  height: calc(98.2vh - 98px) !important;
+  margin-right: 100% !important;
+  position:fixed;
+  margin-top: 36.8px !important;
+  background: linear-gradient(135deg, #4e73d3 0%, #2a4365 100%) !important;
+  z-index: 5;
+}
+
+
+.layout .footer {
+  margin-top: auto !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout .content {
+  margin-left: 250px !important;
+  margin-top: 70px !important; /* Offset the content from the navbar */
+  flex-grow: 1 !important; /* Ensure the content takes the remaining space */
+  z-index: 10;
+}
+
+/* Align search input to the right */
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.btn-search {
+  margin-top: 30px;
+  width: 12% !important;
+}
+
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table td .d-flex{
+  justify-content: center;
+}
+
+.btn-tambah{
+  margin-top: 30px;
+  gap:8px;
+  z-index: 1;
+  width: 12%;
+}
+
+
